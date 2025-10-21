@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+						http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ProyectoMavenWeb</display-name>
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class> <!-- la clase a la cual pertene la anterior linea -->
+		<load-on-startup>1</load-on-startup> <!-- que cuando carge la aplicacion inicie con esto -->
+	</servlet>
+
+	<!-- Indicar las URLS por las cuales mi servlet anterior se va activar -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern> <!-- que cuando hay invocaciones a archivos con extension xhtml -->
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- Cuando JSF hace una recarga de las paginas tienes la opcion que guarde 
+		el estado y con lo siguiente podemos indicar el lugar donde sera guardado 
+		este estado DONDE EL CLIENTE O EN EL SERVIDOR -->
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>client</param-value>
+	</context-param>
+
+	<!-- Si se desea un almacenamiento parcial LO MEJOR ES DESACTIVARLO es una 
+		cache la cual genera inconvenientes ya que muestra datos guardados anteriormente -->
+	<context-param>
+		<param-name>javax.faces.PARCIAL_STATE_SAVING</param-name>
+		<param-value>false</param-value>
+	</context-param>
+</web-app>

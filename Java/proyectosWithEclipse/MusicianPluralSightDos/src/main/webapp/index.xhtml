@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/page-template.xhtml">
+	<ui:param name="pageTitle" value="Popular Products" />
+	<ui:define name="panel-main">
+		<section> <h1>Popular Products</h1> <h:form>
+			<section class="product-summary"> <img
+				src="resources/musicShop/images/battery.jpg" alt="battery" /> <h2>Baterry</h2>
+			<p>Essential for every musician- this Battery makes your sounds
+			great!!</p> <p>Price: $ 5.00 </p> <p>
+			<h:outputLink value="product-details.xhtml">Product Details</h:outputLink>
+			</p></section>
+			<section class="product-summary"> <img
+				src="resources/musicShop/images/flauta.jpg" alt="Flauta" /> <h2>Flauta</h2>
+			<p>Essential for every musician- this Battery makes your sounds
+			great!!</p> <p>Price: $ 90.00 </p> <p>
+			<h:outputLink value="product-details.xhtml">Product Details</h:outputLink>
+			</p> </section>
+			<section class="product-summary"> <img
+				src="resources/musicShop/images/guitar.jpg" alt="guitar" /> <h2>Guitar</h2>
+			<p>Essential for every musician- this Guitar makes your sounds
+			great!!</p> <p>Price: $ 122.00 </p> <p>
+			<h:outputLink value="product-details.xhtml">Product Details</h:outputLink>
+			</p> </section>
+			<section class="product-summary"> <img
+				src="resources/musicShop/images/microfon.jpg" alt="Microfon" /> <h2>Microfon</h2>
+			<p>Essential for every musician- this Microfon makes your sounds
+			great!!</p> <p>Price: $ 78.00 </p> <p>
+			<h:outputLink value="product-details.xhtml">Product Details</h:outputLink>
+			</p> </section>
+			<section class="product-summary"> <img
+				src="resources/musicShop/images/piano.jpg" alt="piano" /> <h2>Piano</h2>
+			<p>Essential for every musician- this Piano makes your sounds
+			great!!</p> <p>Price: $ 895.00 </p> <p>
+			<h:outputLink value="product-details.xhtml">Product Details</h:outputLink>
+			</p> </section>
+		</h:form> </section>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<h:head>
+		<title>Pagina de MitoCode Jakarta</title>
+	</h:head>
+	<h:body>
+		<h1>Pagina de MitoCode de la especificacion Jakarta</h1>
+		<h:form>
+			<h:inputText value="#{humano.name}" />
+			<p:commandButton value="Agregar" actionListener="humano.agregar" ajax="dt_name" />
+
+			<p:dataTable id="dt_name" value="#{humano.list}" var="e">
+				<p:column>
+					<h:outputText value="#{e}" />
+				</p:column>
+
+			</p:dataTable>
+		</h:form>
+	</h:body>
+</f:view>
+</html>
+

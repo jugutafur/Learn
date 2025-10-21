@@ -1,0 +1,62 @@
+body{
+    background-color:#004bbe;
+    color:white;
+    font-family:'Ralewey', sans-serif;
+}
+header{
+    width:1000px;
+    height:200px;
+    margin:auto;
+    position:relative;
+}
+header img{
+    position:absolute;
+    width:80px;
+    top:80px;
+    height:80px;
+    left: 20px;
+    border-radius:15px;
+    box-shadow:#666666 8px 8px 10px; 
+}
+header p{
+    position:absolute;
+    bottom:0px;
+    left: 20px;
+}
+header ul{
+    position:absolute;
+    bottom:20px;
+    right:0; 
+}
+header ul li{
+    display:inline-block; 
+    font-size:18px;
+    margin-left:10px;
+    bottom: 300px;
+}
+header ul li#selected{
+    border-bottom:4px solid white;
+}
+#principal{
+    width:1000px;
+    height:200px; 
+    margin:0 auto; 
+    background-color:red; 
+}
+#principal form{
+    background-color:green; 
+    position:absolute;
+    width: 480px;
+    margin-top: 0px;
+    line-height: 30px; 
+}
+#principal form #prueba{
+            text-align:center;
+            background-color:white; 
+            color: red;
+}
+
+
+#principal form h3{
+    color:blue;
+}

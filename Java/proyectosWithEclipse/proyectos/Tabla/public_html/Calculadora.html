@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var num1=parseInt(prompt("Ingrese el numero 1"));
+            var num2=parseInt(prompt("Ingrese el numero 2"));
+            var letra=prompt("ingrese un caracter").charAt(0).toLowerCase();
+            
+            
+            alert("letra es = "+ letra);
+            
+           if(!isNaN(num1)  &&  !isNaN(num2)){                  //! le da la vuelta a la condicion 
+                                                                //isNaN pregunta is es un numero el argumento ()
+            alert(parseInt(num1)+parseInt(num2));               //parseInt(convierte a numero)
+            alert(typeof(num1));                                //devuelve que tipo de datos es 
+            alert(typeof(num2))
+            
+            var resultado;
+            document.write("prueba");
+            operacion=prompt("¿Que operacion desea realizar <br/>1. Suma<br/> Resta<br/>multiplicacion<br/>Division").charAt(0).toLowerCase();
+            
+            if(operacion=="s" ||operacion=="r" ||operacion=="m" ||operacion=="d" ){
+                alert("a operar");
+                
+                
+        document.write("<p>");
+        document.write("Operaciones a realizar<br/>Suma = "+(num1+num2)+"<br/>Resta = "+(num1-num2)+"<br/>Multiplicacion = "+(num1*num2)+"<br/>Division = "+(num1/num2));
+
+        document.write("</p>");
+                
+            }else{
+                alert("Ingresaste mal nene");
+            }
+        }else{
+            alert("Ingresaste un string");
+        }
+       
+            
+            
+        </script>
+    </head>
+    <body>
+        <h1>calculador web</h1>
+        <div>TODO write content</div>
+    </body>
+</html>

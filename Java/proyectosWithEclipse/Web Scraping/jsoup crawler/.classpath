@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/HP/Desktop/juanTafur/jugutafur/proyectosJava/proyectosWithEclipse/Web Scraping/jsoup crawler/lib/jsoup-1.15.4.jar" sourcepath="C:/Users/HP/.m2/repository/org/jsoup/jsoup/1.15.4/jsoup-1.15.4-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

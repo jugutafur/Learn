@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://java.sun.com/jsf/composite/primefaces">
+
+<ui:composition template="/components/template/template.xhtml">
+	<ui:define name="cV">
+		<p>Pagina de Curriculum Vitae</p>
+		<h:form>
+			<h2>La hora del Sistema es =</h2>
+			<!--  <%= new java.util.Date() %> -->
+			<p>on this page You can check connection to Database</p>
+			<h:outputLabel value="#{testConexion.prueba}" />
+			<h:commandButton actionListener="#{testConexion.aumentar()}" value="Aumnetar" />
+			<h:commandButton actionListener="#{testConexion.disminuir()}" value="Disminuir" />
+			<h:commandButton actionListener="#{testConexion.getData()}" value="get Connection " />
+			
+			<p>Texto de prueba el count = </p>
+			<h:outputLabel value="#{testConexion.count}" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
+
+

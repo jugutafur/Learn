@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+<!-- 	<meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+	<link rel="styleSheet" href="Resources/styles/Styles1.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="Resources/js/prueba.js"></script>
+	<title>Admin page</title>
+</head>
+<body>
+	<script>
+		alert("desde etiqueta JavaScript");
+	</script>
+	<h1>desde admin</h1>
+	
+	<p th:text=${mensaje}></p>
+	<form th:action="@{/logout}" method="POST">
+		<button id="send" type="submit">Log Out</button>
+	</form>
+	<h5>Users:</h5>
+	<div th:each="user :${users}">
+		<h5 th:text="${user.getUsername()}"></h5>
+		<h5>Roles</h5>
+		<div th:each="role: ${role.getRole()">
+			<h5 th:text="${roles.getName()}"></h5>
+		</div>
+	</div>
+</body>
+</html>

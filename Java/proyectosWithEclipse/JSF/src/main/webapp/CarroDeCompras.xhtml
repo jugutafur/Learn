@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<h:head>
+		<title>Carro de Compras</title>
+		<script type="text/javascript">
+			alert("Mensaje de prueba");
+		</script>
+	</h:head>
+	<h:body>
+		<p>En esta pagina estara la opcion de ver una lista con memoria y sin memoria</p>
+		<p>Artículos a comprar:</p>
+		<p>Esto hace parte del curso de java de pildoras informaticas
+			video 237</p>
+		<p>
+			Cuando se le da click en el Boton Enviar se activa el codigo de esta
+			despues del formulario pero no guarda las selecciones anteriores, es
+			decir si el usuario selecciona los 3 primeros items de la lista y le
+			da boton enviar en la parte de abajo se muestran efectivamente los 3
+			elementos <strong>PERO</strong> si el usuario selecciona otro item la
+			nueva vista solo aparecera 1 item NO GUARDA EL ESTADO no hay
+			secciones
+		</p>
+		
+		<h:panelGrid columns="2">
+			<label for="agua">Agua</label> 
+			<input id="agua" type="checkbox" name="articulos" value="agua"/>
+			<label for="leche">leche</label> 
+			<input id="leche" type="checkbox" name="articulos" value="leche"/>
+			<label for="pan">pan</label> 
+			<input id="pan" type="checkbox" name="articulos" value="pan"/>
+			<label for="manzana">manzanas</label> 
+			<input id="manazana" type="checkbox" name="articulos" value="mazanas"/> 
+			<label for="carne">carne</label> 
+			<input id="carne" type="checkbox" name="articulos" value="carne"/>
+			<label for="pescado">pescado</label> 
+			<input id="pescado" type="checkbox" name="articulos" value="pescado"/>
+		</h:panelGrid>
+		
+		<h:commandButton actionListener="#{carroDeCompras.agregarArticulosList()}" value="Agregar"/>
+		
+		
+		<h:form>
+		
+		<h:outputText value="#{carroDeCompras.opcion}" />
+		
+	
+		
+		<h:dataTable value="#{carroDeCompras.listArticulosConMemoria}" var="conMemoria">
+			<h:outputText value="Lista de Articulos con Memoria" />
+			<h:column>
+				<f:facet name="item">
+					<h:outputText value="1" />
+				</f:facet>
+			</h:column>
+			<h:column>
+				<f:facet name="value">
+					<h:outputText value="#{conMemoria.toString()}" />
+				</f:facet>
+			</h:column>
+		</h:dataTable>
+		
+		<h:dataTable value="#{carroDeCompras.listArticulosSinMemoria}" var="sinMemoria">
+			<h:outputText value="Lista de Articulos Sin Memoria" />
+			<h:column>
+				<f:facet name="item">
+					<h:outputText value="1" />
+				</f:facet>
+			</h:column>
+			<h:column>
+				<f:facet name="value">
+					<h:outputText value="#{sinMemoria.toString()}" />
+				</f:facet>
+			</h:column>
+		</h:dataTable>
+		</h:form>
+	</h:body>
+</f:view>
+</html>
+

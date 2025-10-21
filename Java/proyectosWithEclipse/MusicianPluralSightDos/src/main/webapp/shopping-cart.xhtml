@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/page-template.xhtml">
+	<ui:param name="pageTitle" value="Shopping Cart" />
+	<ui:define name="panel-top">
+		<section>
+			<h1>Shopping Cart</h1>
+			<p>Your Shopping Cart is empty</p>
+			<p><h:outputLink value="index.xhtml">Back to Popular Products</h:outputLink></p>
+		</section>
+	</ui:define>
+	<ui:define name="panel-main">
+		<!-- TODO: Content of Shopping Cart -->
+	</ui:define>
+</ui:composition>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Arcaica Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+            var num1=parseInt(prompt("Ingrese el primer Numero"));
+            var num2=parseInt(prompt("Ingrese el segundo Numero"));
+            
+            function getSuma(num1,num2){
+                document.write(num1+num2);
+            }
+            function getResta(num1,num2){
+                document.write(num1-num2);
+            }
+            function getmultiplicacion(num1,num2){
+                document.write(num1*num2);
+            }
+            function getDivision(num1, num2){
+                document.write(num1/num2);
+            }
+            
+            
+          
+    
+        </script>
+        <style>
+            table{
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <form name="form1" method="post" action="" id="miformulario">
+            <table width="25%" border="1" id="mi_tabla">
+                <tr>
+                    <td>Suma:</td>
+                    <td><input type="text" name="textfield1" id="textfield1"></td>
+                </tr>
+                <tr>
+                    <td>Resta:</td>
+                    <td><input type="text" name="textfield2" id="textfield2"></td>
+                </tr>
+                <tr>
+                    <td>Multiplicacion:</td>
+                    <td><input type="text" name="textfield3" id="textfield3"></td>
+                </tr>
+                <tr>
+                    <td>Division:</td>
+                    <td><input type="text" name="textfield4" id="textfield4"></td>
+                </tr>
+            </table>
+        </form>
+        <p>
+            El valor de la suma es <script>getSuma(num1,num2)</script><br/>
+            El valor de la resta es <script>getResta(num1,num2)</script><br/>
+            El valor de la multiplicacion es <script>getmultiplicacion(num1,num2)</script><br/>
+            El valor de la division es <script>getDivision(num1,num2)</script><br/>
+        </p>
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.prueba {
+	background-color: blue;
+}
+
+.navigator{
+	background-color: pink;
+	padding-left: 750px;	
+}
+
+#topNav ul, ol { list-style-position: inside; text-indent: 5px; }
+
+/* #responsivemenu { display: none; } */
+
+nav li.active { background: #555 }
+nav li.active a { color: fuchsia; }
+
+.ajustar:hover{
+	
+	background: yellow;
+} 
+/*
+ul .ajustar:hover {
+	display: block;	
+} */
+
+nav ul:after {
+	display: block;
+}

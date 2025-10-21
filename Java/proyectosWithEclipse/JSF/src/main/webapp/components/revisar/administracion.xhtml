@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head contextType="text/html">
+		<meta charset="UTF-8" />
+		<title>Administracion</title>
+		<!--  <h:outputStylesheet name="/css/default.css" /> -->
+	</h:head>
+	<body>
+		<header>
+		<p>This is Administrator</p>
+		</header>
+		<h:form>
+			<h:commandLink action="/index" value="ir al index" />
+			<br />
+			<h:outputText value="Seleccione que Usuarios desea visualizar" />
+			<br />
+			<br />
+			<h:selectOneMenu>
+				<f:selectItem itemValue="Clientes" itemLabel="Clientes" />
+				<f:selectItem itemVlaue="Empleados" itemLabel="Empleados" />
+			</h:selectOneMenu>
+			<br />
+			<br />
+		</h:form>
+		<h:form id="form">
+			<div class="class crud-demo">
+				<p:growl id="messages" showDeatil="true" />
+				<p:toolbar>
+					<p:toolbarGroup>
+					<h:outputText value="#{cliente.bandera}" /><br/><br/>
+						<p:commandButton value="Nuevo Cliente" icon="pi pi-plus"
+							actionListener="#{cliente.crearNewCliente}"
+							oncomplete="PF('addNuevoCliente').show()"
+							update=":form:addNewEntity" styleClass="ui-button-success"
+							style="margin-right: .5rem">
+							<p:resetInput target=":form:addNewEntity" />
+						</p:commandButton>
+						<p:commandButton value="Nuevo Empleado" icon="pi pi-plus"
+							oncomplete="PF('addNuevoEmpleado').show()"
+							styleClass="ui-button-success" style="margin-right: .5rem">
+							<p:resetInput target=":form:manage-empleado-content" />
+						</p:commandButton>
+					</p:toolbarGroup>
+				</p:toolbar>
+
+				<p:toolbarGroup>
+					<h:dataTable value="#{cliente.listToClientes}" var="listCliente">
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="nickName" />
+							</f:facet>
+							<h:outputLabel value="listCliente.nickName}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Points" />
+							</f:facet>
+							<h:outputLabel value="listCliente.points}" />
+						</h:column>
+					</h:dataTable>
+				</p:toolbarGroup>
+
+				<!-- Modal Crear Cliente  -->
+
+				<p:dialog header="Detalle Cliente" showEffect="fade" modal="true"
+					resposive="true" widgetVar="addNuevoCliente">
+					<!-- 
+		<p:outputLabel  rendered="#{empleado.rol.equals("CLIENTE")?true:false}" value="prueba de juan" />
+		  -->
+					<p:outputPanel id="addNewEntity" class="ui-fluid">
+						<h:panelGrid columns="2">
+							<h:outputText value="Datos Cliente" />
+							<br />
+							<br />
+							<h:outputLabel value="nickName" for="nickName" />
+							<h:inputText id="nickName" value="#{cliente.nickName}"
+								required="false" />
+							<h:outputLabel value="points" for="points" />
+							<h:inputText id="points" value="#{cliente.points}"
+								required="false" />
+
+							<h:outputText value="Datos Basicos" />
+							<br />
+							<br />
+							<h:outputLabel value="Nombre" for="nombre" />
+							<h:inputText id="nombre" value="#{cliente.nombre}"
+								required="false" />
+
+							<h:outputLabel value="Apellido" for="apellido" />
+							<h:inputText id="apellido" value="#{cliente.apellido}"
+								required="false" />
+
+							<h:outputLabel value="cedula" for="cedula" />
+							<h:inputText id="cedula" value="#{cliente.cedula}"
+								required="false" />
+
+							<h:outputLabel value="Celular" for="celular" />
+							<h:inputText id="celular" value="#{cliente.celular}"
+								required="false" />
+
+							<h:outputLabel value="sexo" for="sexo" />
+							<h:inputText id="sexo" value="#{cliente.sexo}" required="false" />
+
+							<h:outputLabel value="fechaNacimiento" for="fechaNacimiento" />
+							<h:inputText id="fechaNacimiento"
+								value="#{cliente.fechaNacimiento}" required="false" />
+
+						</h:panelGrid>
+					</p:outputPanel>
+					<f:facet name="footer">
+						<p:commandButton value="Guardar" icon="pi pi-check"
+							actionListener="#{cliente.addToClientToList()}"
+							update="addNewEntity" process="addNewEntity @this" />
+						<p:commandButton value="Cancel" icon="pi pi-times"
+							onclick="PF('addNuevoCliente').hide()"
+							class="ui-button-secondary" />
+					</f:facet>
+				</p:dialog>
+			</div>
+		</h:form>
+	</body>
+</f:view>
+</html>

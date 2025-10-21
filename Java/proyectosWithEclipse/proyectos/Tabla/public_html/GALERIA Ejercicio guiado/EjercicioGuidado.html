@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejercicio Guiado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("body").hide().fadeIn(5000); 
+            });
+            
+            function degradado(){
+                $(document).ready(function(){
+                    $("#imagen1").hide().fadeIn(3000);
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <div id="titulo">pildoras informaticas. Galerias de imagenes</div>
+        <div>
+            <figure>
+                <img src="img caballos/negro.jpg" id="imagen1" name="imagen1" onmouseover="degradado()">
+                <figcaption id="figacaption1">imagen de negrito en la finca</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="img caballos/cafe.jpg" id="imagen2" name="imagen2" onmouseover="degradado()">
+                <figcaption id="figcaption2">cafesito en la selva</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="img caballos/dalmata.jpg" id="imagen3" name="imagen3" onmouseover="degredado()">
+                <figcaption id="figcaption3">dalmata en el parque</figcaption>
+            </figure>
+            
+        </div>
+    </body>
+</html>

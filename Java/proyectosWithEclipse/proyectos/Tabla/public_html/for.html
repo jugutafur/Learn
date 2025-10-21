@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+        var meses=["Enero", "febrero", "marzo", "abril", "mayo", "Junio", "Julio", "agosto",
+                        "septiembre", "octubre", "noviembre", "Diciembre"];
+        for(var i=0; i<meses.length; i++){
+            document.write(meses[i]+"<br/>");
+            //alert("mensaje de prueba"+i);
+        }
+        
+        </script>    
+        
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            var trabajadores =new Array();
+            var persona="", contador=0;
+           
+         while(persona!="salir"){
+             persona= prompt("Ingrese el nombre del trabajor "+contador);
+             trabajadores[contador]=persona;
+             contador++;
+         }   
+         trabajadores.pop();
+            for(var i=0; i<trabajadores.length; i++){
+                document.write("trabajador "+i+" ="+trabajadores[i]+"<br/>");
+            }
+            
+        </script>
+    </body>
+</html>

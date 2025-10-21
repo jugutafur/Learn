@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 abr 2022 17:25:25 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+    <class name="Persistence.MapperXML.Proyecto.Proyecto" table="proyecto" schema="dbo" catalog="portfolio">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" not-null="true" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" not-null="true" />
+        </property>
+        <property name="imagenSrc" type="string">
+            <column name="imagenSrc" not-null="true" />
+        </property>
+        <property name="fechaActualizacion" type="timestamp">
+            <column name="fechaActualizacion" length="23" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

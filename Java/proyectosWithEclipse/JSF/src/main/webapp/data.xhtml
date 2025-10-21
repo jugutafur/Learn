@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html">
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>#{eti['inicio.titulo']}</title>
+		<!--  <h:outputStylesheet library="musician name="css/default.css" />  -->
+	</h:head>
+	<body>
+		<header>
+		<h1>Data</h1>
+		<br />
+		<br />
+		<h2>#{eti['inicio.hola']}</h2>
+		</header>
+		<h:form>
+			<h:panelGrid>
+				<h:commandLink action="/index" value="ir to index" />
+				<h:outputText value=" #{eti['inicio.usuario']}" />
+			</h:panelGrid>
+		</h:form>
+	</body>
+
+
+</f:view>
+</html>

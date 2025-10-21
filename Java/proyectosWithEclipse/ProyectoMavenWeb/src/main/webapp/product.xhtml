@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentYype="text/html">
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>My Products</title>
+		<!-- con esta etiqueta meta logramos que el contenido sea responsive desing -->
+		<meta name="viewport" content="with=device-with, initial-scale=1.0" />
+	</h:head>
+	<h:body>
+		<h1>In this page you can view the products</h1>
+		<header> <h:outputLabel value="Products" /> </header>
+		<h:form id="search">
+			<h:dataTable id="table" var="product"
+				value="#{searchProduct._products}">
+				<h:column>
+					<f:facet name="header">ID Product</f:facet>
+					<h:outputLabel value="#{product._id}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+					<h:outputLabel value="#{product._name}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Details</f:facet>
+					<h:commandButton id="show" value="Show"
+						action="#{searchProduct.showDetails(product._id)}" actionListener="#{searchProduct.updateMessages}"/>
+				</h:column>
+			</h:dataTable>
+			<h:outputLabel value="Current Details:" />
+			<strong>
+			 <h:outputLabel value="#{searchProduct._currentDetails}" />
+			</strong>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

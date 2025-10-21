@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .centrado{
+                text-align:center;
+                background-color:#0066cc;
+                width:25%;
+                margin:auto;
+                padding: 15px;
+                }
+        </style>
+        
+        <script>
+            function getfecha(){
+                var hoy =new Date();
+                document.write(hoy.toDateString());                
+            }
+            function getSuma(num1,num2){
+                document.write(num1+num2);
+            }
+            
+            function getNombre(nombre){
+                document.write(nombre)
+            }
+            var nombre=prompt("Introduzaca su nombre");
+            var nombre2="martin";
+            
+            var num1=3,num2=4;
+            
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <p class="centrado"><strong>¿y que dia s hoy?</strong></p>
+        <p>hoy es dia: <script>getfecha();</script></p>
+            <p style="font-size:44px; font-size:bold"> hola <script>getNombre(nombre);</script> bienvenido a mi pagina web </p>
+        <p> hay una <strong>Suma que da como resultado <script>getSuma(num1,num2);</script> metodos</strong></p>
+    </body>
+</html>

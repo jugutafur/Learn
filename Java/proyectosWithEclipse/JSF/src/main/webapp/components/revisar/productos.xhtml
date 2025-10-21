@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/components/template/template.xhtml">
+	<ui:define name="productos">
+		<p>This is Page Product</p>
+		<h:form>
+			<!-- etiquetas link -->
+			<h:commandLink action="/index" value="Principal" />
+			<br />
+			<h:commandLink action="/pageOne" value="Pagina Uno" />
+			<br />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
+

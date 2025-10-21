@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+            .micontenedor{
+                background-color:#ffcc00;
+            }
+            
+        </style>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+    <script>
+      //1.$(document).on('ready',function(){});
+      //2.$(function(){});
+        $(document).ready(function(){
+           alert($("#errores p strong").html()); 
+           $("#errores").html("<p>en este caso considero que lo <em><strong>mejor</strong></em>\n\
+            es ir a la cama a espera que me llamaen a trabajar</p>");       //reeemplazar contenido
+           
+           
+           
+            $("#errores").append("<p>despes miguel angel tafur</p>"); //agregar contenido despues
+            alert("ahora va a greagar texto antes");
+            $("#errores").prepend("<p>antes carlos <mark>alberto</mark> tafur</p>");    //agrega contenido antes 
+            alert("se va a mostrar un textoantes del contenedor");
+            $("#errores").before("<p>texto antes de la <mark><small><em>etiqueta</em></small></mark> errores</p>");
+            alert("se va a miostar una texto despùes del contenedor");
+            $("#errores").after("<p>texto depues de todo</p>");
+            
+            
+        });
+        
+    </script>
+    
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="errores" class="micontenedor">
+                <p>
+                    este es un excelente dia para <strong>trabajar</strong> en la noche
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

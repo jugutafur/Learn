@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/components/template/template.xhtml">
+	<ui:param name="pageTitle" value="mitoCode" />
+	<ui:define name="mitoCode">
+		<p>Pagina de MitoCode</p>
+		<h:form>
+		<h:panelGrid columns="2">		
+			<h:outputLabel value="Ingrese Nombre" for="name" />
+			<h:inputText id="name" value="#{personBean._person._name}" />
+			<h:commandButton value="saludar!!"
+				actionListener="#{personBean._person.getting()}" />
+			<h:outputLabel value="#{personBean._person._message}" rendered="#{personBean._person._name.length()>0}"/>
+		</h:panelGrid>
+			<br />
+			<br />
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nombres" for="name2"/>
+				<h:inputText id="name2" value="#{personBean._person._name}" />
+				<h:outputLabel value="Apellidos" for="last_name"/>
+				<h:inputText id="last_name" value="#{personBean._person._lastName}" />
+				<h:outputLabel value="Sexo" for="sexo"/>
+				<h:selectOneMenu id="sexo" value="#{personBean._person._sexo}">
+					<f:selectItem itemValue="M" itemLabel="Masculino" />
+					<f:selectItem itemValue="F" itemLabel="Femenino" />
+				</h:selectOneMenu>
+			</h:panelGrid>
+			<h:commandButton actionListener="#{personBean.addPerson()}"
+				value="Agregar" />
+			<h:dataTable var="interador" value="#{personBean._listPersons}"
+				rendered="#{personBean._listPersons.size()>0}">
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Nombre" />
+					</f:facet>
+					<h:outputLabel value="#{interador._name}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Apellido" />
+					</f:facet>
+					<h:outputLabel value="#{interador._lastName}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Sexo" />
+					</f:facet>
+					<h:outputLabel value="#{interador._sexo}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Action" />
+					</f:facet>
+					<h:commandLink
+						actionListener="#{personBean.deletePerson(interador)}"
+						value="Eliminar" />
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

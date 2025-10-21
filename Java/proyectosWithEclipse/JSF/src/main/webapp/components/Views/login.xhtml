@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/components/template/template.xhtml">
+	<ui:define name="login">
+		<p>Pagina de login</p>
+		<h:form>
+			<h:commandButton action="/index" value="ir al inicio" />
+			<div class="grid">
+				<div class="row space-bot">
+					<!--Logo-->
+					<div class="c4">
+					<!-- 
+						<a href="index.html"> <img src="images/logo.png" class="logo"
+							alt=""></a> -->
+					</div>
+					<!--Menu-->
+					<div class="c8">
+						<nav id="topNav">
+						<ul id="responsivemenu">
+							<li class="active"><a href="index.html"><i
+									class="icon-home homeicon"></i><span class="showmobile">Home</span></a></li>
+							<li class="ajustar"><a href="#"  >Templates</a>
+								<ul style="display: none;">
+									<li><a href="about.html">About</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="testimonials.html">Testimonials</a></li>
+									<li><a href="faq.html">F.A.Q.s</a></li>
+									<li><a href="gallery.html">Gallery</a></li>
+									<li><a href="timeline.html">Timeline</a></li>
+									<li class="last"><a href="404.html">404 Page</a></li>
+								</ul></li>
+							<li><a href="#">Proyectos</a>
+								<ul style="display: none;">
+									<li><a href="team.html">Proyecto Uno</a></li>
+									<li><a href="pricing.html">Proyecto Dos</a></li>
+									<li><a href="columns.html">Proyecto Tres</a></li>
+
+								</ul></li>
+							<li><a href="#">Portfolio</a>
+								<ul>
+									<li><a href="portfolio2.html">Java SE</a></li>
+									<li><a href="portfolio3.html">Java EE</a></li>
+									<li><a href="portfolio4.html">Solutions</a></li>
+									<li><a href="portfolio5.html">Five Columns</a></li>
+								</ul></li>
+							<li class="last"><a href="contact.html">Contact</a></li>
+
+						</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
+
+

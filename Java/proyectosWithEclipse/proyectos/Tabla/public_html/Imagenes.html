@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Galeria</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            #picture{
+                background-color:#cccc00;                
+                margin:auto;
+                width:50%;
+            }
+            #imagen{
+                background-color:#cc0000;
+                height:100px;
+                width:70%;
+                
+            }
+            
+        </style>
+        
+        <script>
+            function description(){
+                alert("este es un caballo");
+            }
+            function detalles(){
+                alert("detalles de caballo");
+            }
+            
+            
+        </script>
+            
+        
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <figure>
+            <img src="img caballos/negro.jpg" width="450" height="250" onclick="description()">            
+            <figcaption id="picture">
+                imagen de negrito en la finca
+            </figcaption>
+        </figure>
+        
+        <p onclick="detalles()" id="imagen" onmouseover="detalles()">en esta pagina encotraras</p>
+        
+    </body>
+</html>

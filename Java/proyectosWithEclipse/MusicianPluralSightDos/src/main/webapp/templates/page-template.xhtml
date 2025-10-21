@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html">
+	<h:head>
+		<meta charset="UTF-8"/>
+		<title>Musician PluralSight - #{pageTitle}</title>
+		<link rel="stylesheet" href="resources/musicShop/css/default.css"/>
+	</h:head>
+	<h:body>
+		<header>
+			<h1>welcome to the JSF Music Shop</h1>
+		</header>
+		<ui:insert name="panel-top">
+			<section>
+				<h1>Welcome,visitor!</h1>
+				<p>Your. <h:outputLink value="shopping-cart.xhtml">Shoopping cart</h:outputLink> is empty</p>
+			</section>
+		</ui:insert>
+		<ui:insert name="panel-main">
+			<section>
+				<h1>Main panel</h1>
+				<p>Placeholder text.</p>
+			</section>
+		</ui:insert>
+		<footer>
+			<p>Thanks for visiting!</p>
+		</footer>
+	</h:body>
+</f:view>
+</html>

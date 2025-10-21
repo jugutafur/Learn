@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="BD_Alumnos/src"/>
+	<classpathentry kind="src" path="BD_CocaCola/src"/>
+	<classpathentry kind="src" path="BusquedaSecuencial/src"/>
+	<classpathentry kind="src" path="CalificacionesFinales/src"/>
+	<classpathentry kind="src" path="CocaCola/src"/>
+	<classpathentry kind="src" path="CuantoDinero/src"/>
+	<classpathentry kind="src" path="Descuento_compra/src"/>
+	<classpathentry kind="src" path="Horas_laboradas/src"/>
+	<classpathentry kind="src" path="Interfaz_Grafica/src"/>
+	<classpathentry kind="src" path="Mayus_o_Minus/src"/>
+	<classpathentry kind="src" path="OrdenarMatriz/src"/>
+	<classpathentry kind="src" path="Sena/src"/>
+	<classpathentry kind="src" path="Uno/src"/>
+	<classpathentry kind="src" path="Vaciones/src"/>
+	<classpathentry kind="src" path="VentasCarros/src"/>
+	<classpathentry kind="lib" path="BD_Alumnos/driver-connector/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="CocaCola/dist/CocaCola.jar"/>
+	<classpathentry kind="lib" path="Sena/dist/Sena.jar"/>
+	<classpathentry kind="output" path="BD_Alumnos/build/classes"/>
+</classpath>

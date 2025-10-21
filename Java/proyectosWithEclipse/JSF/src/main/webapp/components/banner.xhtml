@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+	<div class="card">
+		<h:form>
+			<p:breadCrumb>
+				<p:menuitem value="Inicio" action="/components/Views/principal" />
+				<p:menuitem value="Curriculum Vitae" action="/components/Views/cV" />
+				<p:menuitem value="Proyectos" action="/components/Views/proyectos" />
+				<p:menuitem value="Contacto" action="/components/Views/contacto" />
+				<p:menuitem value="Login" style="float:right" action="/components/Views/login" />
+				<p:menuitem value="crudMitoCode" style="float:right" action="/components/Views/mitoCode/crudMitoCode"/>
+			</p:breadCrumb>
+		</h:form>
+	</div>
+</ui:composition>
+</html>
+

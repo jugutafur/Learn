@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/page-template.xhtml">
+	<ui:param name="pageTitle" value="Product Details" />
+	<ui:define name="panel-main">
+		<section class="product-details">
+		<img src="resources/musicShop/images/battery.jpg" alt="battery"/>
+		<h:form>
+			<h1>Battery</h1>
+			<p>Essential for every vocalist - this Battery makes your voice sounds great!!</p>
+			<p>Price: 56.58 <h:commandLink>Add to cart</h:commandLink></p>
+			<p><h:outputLink value="index.xhtml">Back to Popular Products</h:outputLink></p>
+		</h:form> 
+		</section>
+	</ui:define>
+</ui:composition>
+</html>

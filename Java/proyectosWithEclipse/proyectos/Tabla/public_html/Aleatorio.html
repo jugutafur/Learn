@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aleatoria</title>
+    <script>
+    
+        var aleatorio=Math.round(Math.random()*100);
+        var num1=0;
+        var contador=0;
+        alert(aleatorio);
+        document.write("<p>texto de prueba2</p>");
+
+    do{
+            num1=prompt("Ingrese el numero de 0-100");
+            if(aleatorio>num1){
+                alert("mas alto");
+                document.write("mas alto"+"<br/>");
+            }if(aleatorio<num1){
+                alert("mas bajo");
+                document.write("mas bajo"+"<br/>");
+                }
+            contador++;
+    }while(aleatorio!=num1);
+        
+        document.write("saliste de do while en "+contador+" Intentos");
+    </script>
+        
+    </head>
+    <body>
+        <h1>titulo</h1>
+        <script>
+            document.write("<p>estas en el body</p>");
+        </script>
+        
+
+    </body>
+</html>

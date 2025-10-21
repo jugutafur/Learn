@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+<f:view contextType="text/html">
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>Results</title>
+		<!--   <h:outputStylesheet library="musician" name=css/default.css/>  -->
+	</h:head>
+	<h:body>
+		<header>
+			<h1>Pagina de Salida</h1>
+		</header>
+		<table>
+			<thead>
+				<tr>
+					<th>Dato</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Nombre: <h:outputText value="#{empleado.nombre}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Apellido: <h:outputText
+							value="#{empleado.apellido}" /></td>
+				</tr>
+				<tr>
+					<td>Celular: <h:outputText
+							value="#{empleado.celular}" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<br />
+		<h:form>
+			<h:commandLink action="/index" value="Retun to index"></h:commandLink>
+		</h:form>
+		
+		<p:button value="Submit" />
+	</h:body>
+</f:view>
+</html>

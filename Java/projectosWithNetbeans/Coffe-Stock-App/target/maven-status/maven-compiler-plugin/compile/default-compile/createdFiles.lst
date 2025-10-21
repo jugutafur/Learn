@@ -1,0 +1,7 @@
+com\java\fundamentals\coffe\stock\app\Service\Imp\StoreServiceImpl.class
+com\java\fundamentals\coffe\stock\app\Service\StoreServiceI.class
+com\java\fundamentals\coffe\stock\app\Respository\Imp\StoreRepositoryImpl.class
+com\java\fundamentals\coffe\stock\app\Entity\Stock.class
+com\java\fundamentals\coffe\stock\app\Entity\Store.class
+com\java\fundamentals\coffe\stock\app\Respository\StoreRepositoryI.class
+com\java\fundamentals\coffe\stock\app\Entity\Product.class

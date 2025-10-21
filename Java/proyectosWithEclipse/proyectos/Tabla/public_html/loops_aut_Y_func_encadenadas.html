@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JQUERY</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            
+            //hay tres formas de dejar pendiente una funcion jquery despues que carge el documento
+            
+        //1.$(document).on('ready',function(){});
+        //2.$(function(){});
+            $(document).ready(function(){
+               //poner a la espera nuestro codigo javascript hasta que carge
+               $("body").hide().fadeIn(3000);
+               
+               
+             //$("figure figcaption").text("<p>este reemplaza el texto original PERO NO quita las etiquetas 'p' </p>")
+               $("figure figcaption").html("<p>este reemplaza el texto original PERO SI quita las etiquetas 'p' </p>");
+            });
+            
+            
+            //$(document).on('ready',function(){});
+            //$(function(){}); funcion anonima
+            $(document).ready(function(){
+               
+               $("#aviso").width(300)
+               .height(300)
+               .text("texto desde JQUERY")
+               .hide()
+               .fadeIn(10000);
+            });
+            
+            
+        </script>
+        <style>            
+            #picture{
+                margin:auto;
+                background-color:yellow;
+                width:50%;
+            }
+            #aviso{
+                background-color:blue; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <p>En esta pagina trabajaremos con liberias JQUERY</p>
+        <div>TODO write content</div>
+        <figure id="picture">
+            <img src="img caballos/negro.jpg">
+            <figcaption>
+                <p>imagen de negrito</p>
+            </figcaption>
+        </figure>
+        <div id="aviso">compra</div>
+ 
+<!--   De esta manera tambien podemos modificar estilos desde javaScript PERO de manera 
+        ANTIGUA ya con JQUERY hacemos fucniones encadenadas  comose ve en la parte de arriba
+        
+        <script>
+            
+            var modificacion=document.getElementById("aviso");
+            
+            modificacion.style.backgroundColor="red";
+            modificacion.style.height="250px";
+            modificacion.style.width="250px";
+            modificacion.innerHTML="ESTE TEXTO CAMBIA";
+        </script>
+-->               
+ 
+<!-- ESTO ES DE LA FORMA ANTIGUA se CREA un OBJETO con el metodo queryselectorAll
+     tenemos un ARRAY y con el bucle for hacemos invisibles todas las imagenes AHORA
+     JQUERY tiene LOOPS AUTOMATICOS y con una sola linea de codigo reemplazamos lo 
+     siguiente 
+
+        <script>
+                var imagenes=document.querySelectorAll("carrete img");
+                    for(var i=0; i<imagenes.length; i++){
+                        imagenes[i].style.visibility= "hidden";
+                    }
+        </script>
+-->            
+    </body>
+</html>

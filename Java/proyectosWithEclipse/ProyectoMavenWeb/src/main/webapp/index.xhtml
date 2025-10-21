@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+	<h:head>
+		<meta charset="UTF-8"/>
+		<title>pagina de ProyectoWEB</title>
+		<!--   <h:outputStylesheet library="musicshop" name="css/default.css"/>  -->
+	</h:head>
+	<h:body>
+		<header>
+		<h1>Mi Pagina Jsf tutoria de Cristian Henao = Crear proyecto java
+			web con 👉 MAVEN 👈 https://www.youtube.com/watch?v=UOwC2hmv2Us</h1>
+		</header>
+		<h:form>
+			<h:outputLabel value="#{saludo._mensaje}" />
+			<br></br>
+			<h:outputLabel value="#{saludo.prueba}" />
+			<br></br>
+			<h:commandButton value="soy un boton" />
+			<br></br>
+			<h:commandButton action="#{searchProduct._products}" value="Products" />
+			<p:spinner />
+			<br />
+			<p:button value="Enviar" action="/product"/>
+			<h:commandLink action="/product" value="ir a tecgurus" /><br />
+			<h:outputLink value="product.xhtml" >ir a tec</h:outputLink>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

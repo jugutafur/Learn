@@ -1,0 +1,18 @@
+nav{
+    background-color:red;
+    text-align:left;
+    width:38%;
+    padding:1px;
+ 
+}
+form{
+    background-color:yellow;  
+    width:25%;
+    margin:5px auto;
+    top: 50px;
+}
+nav p{
+    display:inline;
+    margin-top: 50px;
+    font-size:26px; 
+}

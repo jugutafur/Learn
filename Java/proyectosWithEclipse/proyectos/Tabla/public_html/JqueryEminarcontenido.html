@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pagina para remover contenido</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>      
+            
+            #picture{
+                float:left;
+                background-color:#cccc00;
+                color:#0066cc;
+                width:10%;
+                margin:auto;                
+            }
+            figcaption{
+                float:left;
+                background-color: #cc00cc;
+                width:25%;
+                margin:auto;
+                color: #ffffff;
+                text-align:center;
+                paddding:150px;             
+                border:3px solid #00cc33;
+                border-radius:5px 40px 80px 10px; 
+                font-size:26px;
+                box-shadow:#666666 5px 25px 10px; 
+            }
+            
+            #Banner1{
+                background-color:#ff0033;
+                color:#ffffff;
+                width:300px;
+                height:400px;
+                position:absolute;
+                left: 800px;
+                top: 100px;
+                font-size:36px;
+                text-align: center;
+            }
+            
+            #Banner2{
+                background-color:#009900;
+                color:#ffffff;
+                width:300px;
+                height:500px;
+                position:absolute;
+                left:100px;
+                top:100px;
+                font-size:36px;
+                text-align:center;
+            }
+            
+            #Banner3{
+                background-color:#6666ff;
+                color:#ffffff;
+                font-size:36px;
+                text-align:center;
+                position:absolute;
+                top:100px;
+                left:1500px;
+                width:300px;
+                height:500px;
+            }
+            
+            #carrito{
+                float:left;
+                background-color:#cccc00;
+                font-size:16px;
+                tex-align:center;
+                color:#3333ff;
+                width:50%;
+            }
+            
+        </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script>
+            
+            
+            function cerrar(){
+                alert("casi casi");
+                $("#Banner1").remove();
+            }
+            
+            $(document).ready(function(){
+                var z=document.getElementById("Ban_Cerrar2");
+                z.addEventListener("click", cerrarbaner2, false);
+                document.getElementById("Ban_Cerrar3").addEventListener("click", cerrarbaner3, false);
+                document.getElementById("Imagen1").addEventListener("click", carrito, false);
+            });
+                        
+           function carrito(){
+               $("#Imagen1").replaceWith("<p id='carrito'>agreagado al <em><mark><strong>carrito</strong></mark></em> de la tienda</p>");
+           }
+           
+            function cerrarbaner2(){
+                alert("estas cerrando el segundo");
+                $("#Banner2").remove();
+            }
+            
+            function cerrarbaner3(){
+                alert("estas cerrando el tercero");
+                $("#Banner3").remove();
+            }
+            
+               
+               
+            
+          
+        </script>
+    </head>
+    <body bgcolor="blue">
+        <header>
+        </header>
+        <nav>
+        </nav>
+        <aside>
+        </aside>
+        <section>
+        </section>
+        
+        <div>Texto de prueba</div>
+
+        <h1>hay tres formas de eliminar o reemplazar contenedores </h1>
+        <div id="Banner1">
+            <p>Banner primero<br/></br> desde la etiqueta o contenedor creamos el 
+            evento <em><mark><strong>onclick</strong></mark></em></p>
+            
+            <p id="Ban_Cerrar1" onclick="cerrar()">Cerrar</p>
+        </div>
+<!--................................................................................................    -->        
+        <div id="Banner2">
+            <p>Banner segundo<br/><br/>creamos una <em><mark><strong>variable</strong></mark></em> y 
+            le indicamos que <em><mark><strong>espere el evento click</strong></mark></em>xxxxxx</p>
+            
+            <p id="Ban_Cerrar2">Cerrar</p>
+        </div>
+<!--................................................................................................    -->               
+        <div id="Banner3">
+            <p>banner tercero<br/><br/>con <em><mark><strong>funciones encadenadas</strong></mark></em> sin 
+            crear variable en una sola linea de codigo</p>
+            
+            <p id="Ban_Cerrar3">Cerrar</p>
+        </div>
+<!--................................................................................................    -->                
+        <figure>
+            <img src="img caballos/negro.jpg" id="Imagen1"/>
+            <figcaption>
+                1. Imagen de negrito
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="img caballos/cafe.jpg" id="Imagen2">
+            <figcaption>
+                2. Imagen de cafesito
+            </figcaption>
+        </figure>
+<!--................................................................................................    -->        
+        <figure>
+            <img src="img caballos/dalmata.jpg/" id="Imagen3">
+            <figcaption style="background-color: #ffff00">
+                3. Imagen de Dalmata
+            </figcaption>
+        </figure>
+<!--................................................................................................    -->        
+        
+        <footer>
+        </footer>
+    </body>
+</html>

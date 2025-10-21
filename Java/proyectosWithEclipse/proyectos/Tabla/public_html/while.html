@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Uso de while</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            var meses=["Enero", "febrero", "marzo", "abril", "mayo", "Junio", "Julio", "agosto",
+                        "septiembre", "octubre", "noviembre", "Diciembre"];
+            var contador=0;
+            
+            while(contador<meses.length){
+                document.write(meses[contador]+"<br/> ");
+                contador++;
+            }
+            
+            var Nombre= prompt("Ingrese su nombre","Nombre");
+                while(!isNaN(Nombre)){
+                    Nombre=prompt("Ingrese un Nombre valido","Nombre");
+                }
+            var Apellido= prompt("ingrese el apellido","Apellido");
+                while(!isNaN(Apellido)){
+                    Apellido=prompt("ingrese un Apellido valido","Apellido");
+                }
+            var Edad= parseInt(prompt("Ingrese edad","Edad"));
+                while(Edad<=0 || Edad>105 || isNaN(Edad)){
+                    Edad=parseInt(prompt("Ingrese una Edad valida","Edad"));
+                }
+            var Telefono=parseInt(prompt("Ingrese el Telefono", "Telefono"));
+                while(isNaN(Telefono)){
+                    Telefono=parseInt(prompt("ingrese un Telefono valido","Telefono"));
+                }
+            var Poblacion= prompt("A que poblacion pertenece", "Poblacion");
+            
+            
+            
+        </script>
+        
+        <style>
+            
+            #contenedor{
+                width:25%;
+                background-color:#00ff33;
+                margin:auto;
+                padding:15px;
+            }
+            
+            
+        </style>
+        
+        
+       
+    </head>
+    <body>
+        <h1>CALENDARIO</h1>
+        <div>TODO write content</div>
+        
+        
+        <div id="contenedor">
+            <p><strong>Nombre:</strong>
+                <script>
+                document.write(Nombre);
+                </script>
+            </p>
+            <p><strong>Apellido:</strong>
+                <script>
+                    document.write(Apellido);                    
+                </script>
+            </p>
+            <p><strong>Edad:</strong>
+                <script>
+                    document.write(Edad);
+                </script>    
+            </p>
+            <p><strong>Telefono:</strong>
+                <script>
+                    document.write(Telefono)
+                </script>
+            </p>
+            <p><strong>Poblacion:</strong>
+                <script>
+                    document.write(Poblacion);
+                </script>                
+            </p>
+            
+        </div>
+    </body>
+</html>

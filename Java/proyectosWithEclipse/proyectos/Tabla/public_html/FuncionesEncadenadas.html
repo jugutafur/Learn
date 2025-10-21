@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            #anuncio{
+                background-color:#ff0033;
+                color:#ffffff;
+                font-size:24px;                
+            }
+        </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#anuncio").width(500)
+                .height(500)
+                .text("OFERTAAAAAA")
+                .hide()
+                .fadeIn(3000);
+            })
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="anuncio">!!Compra¡¡</div>
+       
+        <script>
+            var anuncio=document.getElementById("anuncio");
+            anuncio.style.width="250px";
+            anuncio.style.height="250px";
+            anuncio.innerHTML="!vende!!!";  
+        </script>       
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>Navegation Dos</title>
+		<!--  <h:outputStylesheet library="musician" name="css/default.css"/>  -->
+	</h:head>
+	<h:body>
+		<header>
+		<p>Administrador de tiendas</p>
+		</header>
+
+		<div class="card">
+			<h:form>
+				<p:breadCrumb>
+					<p:menuitem value="Inicio" action="/Views/inicio"/>
+					<p:menuitem value="Productos" action="/Views/productos"/>
+					<p:menuitem value="tiendas" action="/Views/tiendas" />
+					<p:menuitem value="Administracion" action="/Views/administracion"/>
+					<p:menuitem value="Contactenos" action="/Views/contactenos"/>
+					<p:menuitem value="#{store.name}"/>
+					<p:menuitem value="Crud-Primefaces" action="Views/CrudPrimefaces/crudPrimefaces"/>
+				</p:breadCrumb>
+			</h:form>
+		</div>
+
+
+		<h:form>
+			<!--  -->
+			<h:outputText value="jaramillo" /> <br/>
+			<h:outputLabel value="jaramillo" /> <br/>
+			<h:outputText value="#{store.name}" /> <br/>
+			<!--  <h:outputText value="#{gestorDeInventarioTres.test}" /> <br/>  -->
+			<!-- etiquetas link -->
+			<h:commandLink action="/pageOne" value="Ir a pagina uno" />
+			<br />
+			<h:commandLink action="/pageTwo" value="Ir a pagina dos" />
+			<br />
+			<h:commandLink action="/Views/prueba" value="Ir a pagina de prueba" />
+			<br />
+
+			<p:button action="/pageOne" value="Submit" />
+
+			<table>
+				<thead>
+					<tr>
+						<th>Datos</th>
+						<th>Valores</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><h:outputLabel value="Nombre" for="nombre"/></td>
+						<td><h:inputText id="nombre" value="#{empleado.nombre}" /></td>
+					</tr>
+					<tr>
+						<td><h:outputLabel value="Apellido" for="apellido" /></td>
+						<td><h:inputText id="apellido" value="#{empleado.apellido}" /></td>
+					</tr>
+					<tr>
+						<td><h:outputLabel value="Celular" for="celular"/></td>
+						<td><h:inputText  value="#{empleado.celular}" required="true"
+								requiredMessage="Ingrese Celular" id="celular">
+								<!--  <f:validator validatorId="vCelular" />  -->
+							</h:inputText></td>
+						<td><h:message for="celular" style="color:red;" /></td>
+					</tr>
+					<tr>
+						<td><h:commandButton action="#{empleado.mostrarData()}"
+								value="Enviar Datos" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<h:commandButton value="NewView Met" action="#{persona.irNewVista()}" />
+			<br />
+			<br />
+			<h:commandButton value="NewView Dir" action="newView" />
+			<br />
+			<br />
+			<h:commandLink action="#{persona.irNewVista()}"
+				value="Ir a pagina de newView" />
+			<br />
+			<h:commandButton value="OtherNewView"
+				action="#{persona.irOtraVista()}" />
+			<br />
+			<h:commandLink action="/data" value="ir a data" />
+		</h:form>
+	</h:body>
+</f:view>
+</html>
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .numero{
+                width:60px;
+                height:60px;
+
+
+            }
+
+            .igual{
+                width:120px;
+                height:60px;
+
+            }
+            
+            table{
+                margin:auto;
+                background-color:#00ffcc; 
+            }
+            .color_display{
+               height:30px;
+               background-color:#000;
+               border:medium #FFF;
+               font: "Space Age";
+               color:#0F0;
+               font-size:18px;
+               text-align:right;
+               padding:5px;
+                
+            }
+        </style>
+        
+        <script>
+            
+            var cifra=0;
+            var acumulado=0;
+            var operacion="";
+            
+            function displaynumero(numero){
+                document.getElementById("display").value=cifra+numero;
+                cifra=parseInt(document.getElementById("display").value);
+                
+            }
+            function getSuma(){
+                acumulado=acumulado+parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+                cifra="";
+                operacion="sumar";
+            }
+            
+            function getResta(){
+                
+            }
+            
+            function getResultado(){
+                document.getElementById("display").value=acumulado+cifra;
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <table width="15%" border="1">
+            <tr>
+                <td colspan="4" align="center">
+                <input name="display" type="text" class="color_display" id="display" size="25"></td>
+            </tr>            
+            <tr>
+                <td><input name="singoS" type="button" class="numero" id="signoS" value="+" onclick="getSuma()"></td>
+                <td><input name="signoR" type="button" class="numero" id="signoR" value="-" onclick="getResta"></td>
+                <td><input name="signoM" type="button" class="numero" id="signoM" value="*" onclick="getMulplicaion"></td>
+                <td><input name="signoD" type="button" class="numero" id="signoD" value="/" onclick="getDivision"></td>        
+            </tr>
+            
+            <tr>   
+                <td><input name="num7" type="button" class="numero" id="num7" value="7" onclick="displaynumero(7)"></td>
+                <td><input name="num8" type="button" class="numero" id="num8" value="8" onclick="displaynumero(8)"></td>
+                <td><input name="num9" type="button" class="numero" id="num9" value="9" onclick="displaynumero(9)"></td>
+                <td>&nbsp;</td>
+            </tr>           
+            <tr>   
+                <td><input name="num4" type="button" class="numero" id="num4" value="4" onclick="displaynumero(4)"></td>
+                <td><input name="num5" type="button" class="numero" id="num5" value="5" onclick="displaynumero(5)"></td>
+                <td><input name="num6" type="button" class="numero" id="num6" value="6" onclick="displaynumero(6)"></td>
+                <td>&nbsp;</td>
+            </tr>           
+            <tr>   
+                <td><input name="num1" type="button" class="numero" id="num1" value="1" onclick="displaynumero(1)"></td>
+                <td><input name="num2" type="button" class="numero" id="num2" value="2" onclick="displaynumero(2)"></td>
+                <td><input name="num3" type="button" class="numero" id="num3" value="3" onclick="displaynumero(3)"></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input name="numCero" type="button" class="numero" id="numCero" value="0" onclick="displaynumero(0)"></td>
+                <td><input name="singoPunto" type="button" class="numero" id="singoPunto" value="."></td>
+                <td colspan="2"><input name="signoIgual" type="button" class="igual" id="signoIgual" value="=" onclick="getResultado()"></td>
+            </tr>
+          
+        </table>
+        
+        <script>
+            document.getElementById("display").value="0";
+        </script>
+        
+        <div>TODO write content</div>
+    </body>
+</html>

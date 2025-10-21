@@ -1,0 +1,64 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-size:20px; 
+    -moz-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg); 
+}
+
+section{
+    text-align:center;
+    height:auto;     
+}
+
+h2{
+    border-bottom:1px black dashed; 
+    width:90%;
+    margin:auto; 
+}
+
+#navegador{
+    background-color:red;
+    width:50%;  
+}
+
+#navegador ul li{
+    display:inline;
+    margin: 16px; 
+}
+
+#Datos_personales p{
+    margin:initial;
+}
+#Datos_personales{
+    background-color:yellow;
+    margin:5px auto; 
+    border-radius:25px; 
+    width:50%;
+    padding:15px;
+    padding-left:15px; 
+    
+}
+#perfil{
+    background-color:blue;
+    margin:20px auto; 
+    border-radius:25px;
+    width:50%; 
+    padding:15px; 
+}
+#Infor_Acade{
+    background-color:red;  
+    margin:5px auto; 
+    border-radius:25px;
+    width:50%; 
+    padding:15px;
+}
+#infor_Labo{
+    background-color:green; 
+    margin:5px auto; 
+    border-radius:25px; 
+    width:50%; 
+    padding:15px; 
+}

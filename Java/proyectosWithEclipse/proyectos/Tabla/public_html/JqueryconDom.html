@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Jquery con DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        function ver(){
+            alert("caballo");
+        }
+        //hay 3formas de poner alpendiente una funcion una vez que el documento cargue
+        
+    //1.$(document).on('ready',function(){});
+    //2.$(function(){});
+        $(document).ready(function(){
+            $("#carrete img").hide();
+        })
+        
+        </script>
+        
+        
+    </head>
+    <body>
+        <div id="carrete">
+            <img src="img caballos/negro.jpg" width="250" height="175" onclick="ver();">
+            <img src="img caballos/cafe.jpg" width="250" height="175" onmouseover="ver();">
+            <img src="img caballos/dalmata.jpg" width="250" height="150" onclick="ver();">
+            <img src="img caballos/pintar.jpg" width="250" height="100" onmouseover="ver()">
+        </div>
+        <script>
+            var imagenes=document.querySelectorAll("#carrete img");
+            
+            for(var i=0; i<imagenes.length; i++){
+                imagenes[i].style.visibility="hidden";
+            }
+        </script>
+        
+    </body>
+</html>

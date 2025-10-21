@@ -1,0 +1,15 @@
+package com.borrar.Uno.App.Other;
+
+public enum SystemConfiguration {
+	
+	//Power BI
+	POWER_BI_REPORT_URL,
+	POWER_BI_MY_SCORECARD,
+	POWER_BI_PORTFOLIO,
+	POWER_BI_REFERRAL,
+	POWER_BI_CAMPAIGNS,
+	POWER_BI_SCORECARD_KPIS,
+	POWER_BI_COACHING,
+	POWER_BI_NEW_DASHBOARD
+
+}
