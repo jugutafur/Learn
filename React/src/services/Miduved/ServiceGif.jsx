@@ -30,9 +30,6 @@ export function serviceGifByKeyword(keyword, initialGifs){
 			const { url } = image.images.original
 			return { id, title, url }
 		})
-		
-			
-
 		return gifReponseByWKeyword
 	})
 }

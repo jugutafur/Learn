@@ -6,6 +6,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { useContext, createContext } from 'react'
 import Nav from './shared/components/Nav.jsx';
 
+//UN CONSUMIDOR Y UN PROVEEDOR 
+
+//EL PROVEEDOR O PROVIDER en este caso 
+// <Xxxxx.Provider>
+//  dentro de este tap estaran todos los compoentes que pueden usar ese contexto desde cualquier punto
+//</Xxxxx.Provider>
+
+//UN CONSUMIDOR es decir cualquier componente dentro del provider usara para invocar o usar el createContext();
+
 //esto es un Estado Goblal que es independiente de cualquier componente
 //Cualquier componente puede usar este Estado Global
 const ThemeContex = createContext();
@@ -26,8 +35,8 @@ function ThemeProvider({children}){
   )
 }
 
-function ThemeButton (){
-  const {theme, toogleTheme} = useContext(ThemeContex);
+function ThemeButton (){  // si te das cuenta este componente esta dentro del provider es decir que este componente podra invocar o usar el createContext(); y SOLO SI PODRA USARLO CON el hoock useContext();
+  const {theme, toogleTheme} = useContext(ThemeContex);  ///const {objeto que retornaA, objeto que retornaB} = useContext(objeto que recibeA);
   return (
     <div>
       <p>Desde ThemeButton</p>
@@ -52,7 +61,7 @@ function App() {
       {/*Lo siguiente se va a renderizar en todas los layout
        lo cual es otro tabs de navegacion y un boton para cambiar el tema
        Estos 2 componentes estan contenidos en <ThemeProvider> componente que permite acceder al estado global*/}
-      <ThemeProvider>
+       <ThemeProvider>
         <ThemeButton/>
       </ThemeProvider>
     </div>

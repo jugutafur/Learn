@@ -10,19 +10,19 @@ const data = [
 ];
 
 const ListGifs = ({valueGif}) => {
-    return(
-      <List
-				header={<div>Header</div>}
-				footer={<div>Footer</div>}
-				bordered
-				dataSource={valueGif}
-				renderItem={(item, index) => (
-					<List.Item>
-						<Typography.Text mark>{index+1}</Typography.Text> {item}
-					</List.Item>
-				)}
-			/>
-    )
+	return(
+		<List
+			header={<div>Header</div>}
+			footer={<div>Footer</div>}
+			bordered
+			dataSource={valueGif}
+			renderItem={(item, index) => (
+				<List.Item>
+					<Typography.Text mark>{index+1}</Typography.Text> {item}
+				</List.Item>
+			)}
+		/>
+	)
 }
 
 export default ListGifs;
