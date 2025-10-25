@@ -2,9 +2,9 @@ import { PrincipalTitle } from '../../components/text/Titles.jsx';
 import useSelectProjects from '../../shared/components/SelectProjects/useSelectProjects.jsx';
 
 import SelectProjects from '../../shared/components/SelectProjects/SelectProjects.jsx';
-import InitialGalery from '../../core/components/Miduved/InitialGalery.jsx'
-import SearchGifs from '../../core/components/Miduved/SearchGifs.jsx'
-import FormGifs from '../../core/components/Miduved/FormGifs.jsx'
+import InitialGalery from '../../core/components/Miduved/InitialGalery.jsx';
+import SearchGifs from '../../core/components/Miduved/SearchGifs.jsx';
+import FormGifs from '../../core/components/Miduved/FormGifs.jsx';
 
 const Miduved = () => {
   const { opcion, handleChange } = useSelectProjects(1);
