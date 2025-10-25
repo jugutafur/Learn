@@ -9,8 +9,8 @@ npm run dev
 * install sass, preprocesador para css
 npm i sass
 
-* install style-component //pero ya que no esta en mantenimiento y casi en des-uso es mejor emplear tailwind 
-npm i style-component
+* install styled-component //pero ya que no esta en mantenimiento y casi en des-uso es mejor emplear tailwind 
+npm i styled-component
 
 * trabajar con tailwindcss
 https://tailwindcss.com/docs/installation/using-vite
@@ -46,3 +46,10 @@ npm install @mui/icons-material
 * instalar chakra  presentaba error en la implementacion
 https://chakra-ui.com/docs/get-started/installation
 npm i @chakra-ui/react @emotion/react
+
+ademas de lo anterior podemos usar bootstrap y reactstrap 
+https://reactstrap.github.io/?path=/story/home-installation--page
+https://react-bootstrap.netlify.app/docs/getting-started/introduction/
+
+casi es lo mismo pero aunque el siguiente es mas complejo tambien es el mas usado 
+npm install react-bootstrap bootstrap

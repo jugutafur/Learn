@@ -53,7 +53,7 @@ function ThemeButton (){  // si te das cuenta este componente esta dentro del pr
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Router>
         <Nav/>
       </Router>
