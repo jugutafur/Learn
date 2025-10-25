@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { SecondaryTitle } from '../../../components/text/Titles.jsx';
 import { Input } from 'antd';
 import { useLocation } from 'wouter';
-import { serviceGifByKeyword } from '../../../services/Miduved/serviceGif.jsx';
+import { serviceGifByKeyword } from '../../../services/Miduved/ServiceGif.jsx';
 import GifCard from './GifCard.jsx';
 
 const FormGifs = () => {

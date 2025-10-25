@@ -3,7 +3,7 @@ import { SecondaryTitle } from "../../../components/text/Titles.jsx";
 import { Input } from "antd";
 import serviceGif, {
   serviceGifByKeyword,
-} from "../../../services/Miduved/serviceGif";
+} from "../../../services/Miduved/ServiceGif.jsx";
 import GifCard from "./GifCard.jsx";
 
 const SearchGifs = () => {
