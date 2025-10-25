@@ -3,9 +3,9 @@ import { PrincipalTitle } from '../../components/text/Titles.jsx';
 import SelectProjects from '../../shared/components/SelectProjects/SelectProjects.jsx';
 import useSelectProjects from '../../shared/components/SelectProjects/useSelectProjects.jsx';
 
-import Testimonios from '../../core/components/FreeCodeCamp/Testimonio/Testimonios';
-import { ClickCounter } from '../../core/components/FreeCodeCamp/ClickCounter/ClickCounter';
-import Calculadora from '../../core/components/FreeCodeCamp/Calculadora/Calculadora';
+import Testimonios from '../../core/components/FreeCodeCamp/Testimonio/Testimonios.jsx';
+import { ClickCounter } from '../../core/components/FreeCodeCamp/ClickCounter/ClickCounter.jsx';
+import Calculadora from '../../core/components/FreeCodeCamp/Calculadora/Calculadora.jsx';
 import Tareas from '../../core/components/FreeCodeCamp/Tareas/Tareas.jsx'
 import Access from '../../core/components/FreeCodeCamp/Access/Access';
 
