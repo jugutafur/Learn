@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ListGifs from './ListGif.jsx'
 import GifCard from './GifCard.jsx';
-import serviceGif, { serviceGifByKeyword } from '../../../services/Miduved/serviceGif.jsx'
+import serviceGif from '../../../services/Miduved/serviceGif.jsx'
 
 const InitialGalery = () => {
 
@@ -10,8 +10,8 @@ const InitialGalery = () => {
 
 	const URL2 = ['https://media3.giphy.com/media/EPcvhM28ER9XW/giphy.gif?cid=b4da437elrxhjoklbvj4b09eu5pc1hy62qg2yuh8h4g6wq4a&ep=v1_gifs_search&rid=giphy.gif&ct=g&quot;']
 
-	const [valueGif, setValueGif] = useState(URL)
-	const [isClicked, setIsClicked] = useState(false)
+	const [valueGif, setValueGif] = useState(URL);
+	const [isClicked, setIsClicked] = useState(false);
 
 	useEffect(()=>{
 		serviceGif().then(gif => setValueGif(gif))
