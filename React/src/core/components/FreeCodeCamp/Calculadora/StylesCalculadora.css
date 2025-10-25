@@ -1,0 +1,105 @@
+/* 🎨 Variables de color base */
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #000000;
+  --color-verde: #2e8b57;
+  --color-verde-hover: #3cb371;
+  --color-purpura: #6a0dad;
+  --color-purpura-hover: #8a2be2;
+  --color-borde: #ffffff;
+  --sombra-boton: rgba(0, 0, 0, 0.25);
+  --sombra-boton-hover: rgba(0, 0, 0, 0.35);
+}
+
+/* 🌙 Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #121212;
+    --color-texto: #f1f1f1;
+    --color-verde: #3cb371;
+    --color-verde-hover: #5cd68a;
+    --color-purpura: #8a2be2;
+    --color-purpura-hover: #b580ff;
+    --color-borde: #dcdcdc;
+    --sombra-boton: rgba(255, 255, 255, 0.08);
+    --sombra-boton-hover: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* 🧱 Contenedor de filas */
+.fila {
+  display: flex;
+  margin: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 🔹 Base para todos los botones */
+.boton-calculadora,
+.boton-calculadora-operador,
+.boton-clear {
+  width: 100%;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--color-texto);
+  border-radius: 25px;
+  border: 2px solid var(--color-borde);
+  margin: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 12px var(--sombra-boton); /* 🌟 sombra flotante */
+}
+
+/* 💚 Botón numérico */
+.boton-calculadora {
+  background-color: var(--color-verde);
+  font-size: 38px;
+}
+
+/* 💜 Botón operador */
+.boton-calculadora-operador {
+  background-color: var(--color-purpura);
+  font-size: 38px;
+}
+
+/* 💜 Botón clear */
+.boton-clear {
+  background-color: var(--color-purpura);
+  font-size: 50px;
+  text-align: center;
+}
+
+/* ✨ Hover */
+.boton-calculadora:hover {
+  background-color: var(--color-verde-hover);
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px var(--sombra-boton-hover); /* sombra más intensa */
+}
+
+.boton-calculadora-operador:hover,
+.boton-clear:hover {
+  background-color: var(--color-purpura-hover);
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px var(--sombra-boton-hover);
+}
+
+/* 🖱️ Active (clic) */
+.boton-calculadora:active,
+.boton-calculadora-operador:active,
+.boton-clear:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+  box-shadow: 0 3px 6px var(--sombra-boton); /* sombra más corta */
+}
+
+/* 🎛️ Fondo general */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: system-ui, sans-serif;
+}

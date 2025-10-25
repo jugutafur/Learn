@@ -36,22 +36,21 @@ const Testimonios = () => {
     <div>
       <SecondaryTitle>Esto es lo que dicen nuestros alumnos sobre FreeCodeCamp:</SecondaryTitle>
       <div style={{backgroundColor: "orange", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr)", gap: "20px"}}>
-      {
-        participantes.map(participante => (
-          <Testimonio
-            key={participante.key}
-            name={participante.name}
-            city={participante.city}
-            imagen={participante.imagen}
-            profession={participante.profession}
-            company={participante.company}
-            testimonio={participante.testimonio}
-          />
-        ))
-      }
+        {
+          participantes.map(participante => (
+            <Testimonio
+              key={participante.key}
+              name={participante.name}
+              city={participante.city}
+              imagen={participante.imagen}
+              profession={participante.profession}
+              company={participante.company}
+              testimonio={participante.testimonio}
+            />
+          ))
+        }
+      </div>
     </div>
-    </div>
-    
 	)
 }
 

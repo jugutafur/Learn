@@ -6,14 +6,16 @@ import useSelectProjects from '../../shared/components/SelectProjects/useSelectP
 import Testimonios from '../../core/components/FreeCodeCamp/Testimonio/Testimonios';
 import { ClickCounter } from '../../core/components/FreeCodeCamp/ClickCounter/ClickCounter';
 import Calculadora from '../../core/components/FreeCodeCamp/Calculadora/Calculadora';
+import Tareas from '../../core/components/FreeCodeCamp/Tareas/Tareas.jsx'
 import Access from '../../core/components/FreeCodeCamp/Access/Access';
 
 const FreeCodeCamp = () => {
-  const { opcion, handleChange } = useSelectProjects(1);
+  const { opcion, handleChange } = useSelectProjects(4);
   const subProjects = [
     'Testimonios', 
     'ClickCounter', 
     'Calculadora', 
+    'Tareas',
     'Access'];
 
   return (
@@ -31,7 +33,8 @@ const FreeCodeCamp = () => {
           { opcion == 1 ? <Testimonios /> : null}
           { opcion == 2 ? <ClickCounter /> : null}
           { opcion == 3 ? <Calculadora /> : null}
-          { opcion == 4 ? <Access /> : null}
+          { opcion == 4 ? <Tareas /> : null}
+          { opcion == 5 ? <Access /> : null}
         </div>
     </div>
   )

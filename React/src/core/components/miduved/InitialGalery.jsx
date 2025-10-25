@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ListGifs from './ListGif.jsx'
-import GifCard from './GifCard'
-import serviceGif, { serviceGifByKeyword } from '../../../services/Miduved/serviceGif'
+import GifCard from './GifCard.jsx';
+import serviceGif, { serviceGifByKeyword } from '../../../services/Miduved/serviceGif.jsx'
 
 const InitialGalery = () => {
 
